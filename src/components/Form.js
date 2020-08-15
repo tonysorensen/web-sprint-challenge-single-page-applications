@@ -160,9 +160,8 @@ const Form = () => {
           <label htmlFor="toppings">
             Pepperoni:{" "}
             <input
-              className="checkbox"
               name="Pepperoni"
-              input
+              data-cy="Pepperoni"
               id="Pepperoni"
               type="checkbox"
               checked={formState.Pepperoni}
@@ -174,6 +173,7 @@ const Form = () => {
             <input
               id="Sausage"
               name="Sausage"
+              data-cy="Sausage"
               type="checkbox"
               checked={formState.Sausage}
               onChange={inputChange}
@@ -184,6 +184,7 @@ const Form = () => {
             <input
               id="Onions"
               name="Onions"
+              data-cy="Onions"
               type="checkbox"
               checked={formState.Onions}
               onChange={inputChange}
@@ -192,9 +193,8 @@ const Form = () => {
           <label>
             Olives:{" "}
             <input
-              className="checkbox"
               name="Olives"
-              input
+              data-cy="Olives"
               id="Olives"
               type="checkbox"
               checked={formState.Olives}
@@ -208,6 +208,7 @@ const Form = () => {
             <textarea
               id="instructions"
               name="instructions"
+              data-cy="instructions"
               value={formState.instructions}
               onChange={inputChange}
             ></textarea>
@@ -218,6 +219,7 @@ const Form = () => {
             Add to Order
           </button>
         </div>
+        <pre>{JSON.stringify(order, null, 2)}</pre>
       </div>
     </form>
   );
